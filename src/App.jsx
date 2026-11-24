@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import CatalogoProductos from './components/CatalogoProductos';
 import FormularioContacto from './components/FormularioContacto';
 import AuthStorage from './components/AuthStorage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
           <Link className="navbar-brand fw-bold" to="/">
@@ -31,7 +31,7 @@ function App() {
         <Route path="/ejercicio2" element={<FormularioContacto />} />
         <Route path="/ejercicio3" element={<AuthStorage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
